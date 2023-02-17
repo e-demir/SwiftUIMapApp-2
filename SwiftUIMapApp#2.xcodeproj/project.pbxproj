@@ -14,7 +14,7 @@
 		84697C8029A02ACA0081977A /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84697C7F29A02ACA0081977A /* LocationsDataService.swift */; };
 		84697C8229A02BBC0081977A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84697C8129A02BBC0081977A /* Location.swift */; };
 		84697C8429A02EBD0081977A /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84697C8329A02EBD0081977A /* LocationsViewModel.swift */; };
-		84697C8629A02FAF0081977A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84697C8529A02FAF0081977A /* ListView.swift */; };
+		84697C8629A02FAF0081977A /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84697C8529A02FAF0081977A /* LocationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		84697C7F29A02ACA0081977A /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
 		84697C8129A02BBC0081977A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		84697C8329A02EBD0081977A /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
-		84697C8529A02FAF0081977A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		84697C8529A02FAF0081977A /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 		84697C7C29A029BE0081977A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				84697C8529A02FAF0081977A /* ListView.swift */,
+				84697C8529A02FAF0081977A /* LocationsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 			files = (
 				84697C6E29A028C00081977A /* ContentView.swift in Sources */,
 				84697C6C29A028C00081977A /* SwiftUIMapApp_2App.swift in Sources */,
-				84697C8629A02FAF0081977A /* ListView.swift in Sources */,
+				84697C8629A02FAF0081977A /* LocationsView.swift in Sources */,
 				84697C8229A02BBC0081977A /* Location.swift in Sources */,
 				84697C8029A02ACA0081977A /* LocationsDataService.swift in Sources */,
 				84697C8429A02EBD0081977A /* LocationsViewModel.swift in Sources */,
