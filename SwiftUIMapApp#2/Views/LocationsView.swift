@@ -14,9 +14,10 @@ struct LocationsView: View {
                 
     var body: some View {
         ZStack{
-            Map(coordinateRegion: $vm.mapCoordinateRegion)
-                .ignoresSafeArea()
-            
+//            Map(coordinateRegion: $vm.mapCoordinateRegion)
+//                .ignoresSafeArea()
+            mapLayer
+            .ignoresSafeArea()
             VStack(spacing: 0){
                header
                 .padding()
@@ -81,5 +82,22 @@ extension LocationsView{
         .background(.thickMaterial)
         .cornerRadius(10)
         .shadow(color: Color.black, radius: 20, x: 0, y: 15)
+    }
+    private var mapLayer : some View {
+        Map(coordinateRegion: $vm.mapCoordinateRegion,
+            annotationItems: vm.locations,
+            annotationContent: { location in
+            MapAnnotation(coordinate: location.coordinates) {
+                LocationMapAnimationView()
+                    .scaleEffect(vm.mapLocation == location ? 1 : 0.7)
+                    .shadow(radius: 20)
+                    .onTapGesture {
+                        vm.changeLocation(location: location)
+                    }
+            }
+        
+            
+        }
+        )
     }
 }
