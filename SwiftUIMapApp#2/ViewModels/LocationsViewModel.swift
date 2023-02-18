@@ -5,7 +5,7 @@
 //  Created by Emrullah Demir on 18.02.2023.
 //
 
-import Foundation
+import SwiftUI
 import MapKit
 
 class LocationsViewModel : ObservableObject {
@@ -22,6 +22,9 @@ class LocationsViewModel : ObservableObject {
     
     // Empty coordinate region
     @Published var mapCoordinateRegion : MKCoordinateRegion = MKCoordinateRegion()
+    
+    // Is list of places shown
+    @Published var showPlaceList : Bool = false
         
     let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
     
@@ -37,6 +40,12 @@ class LocationsViewModel : ObservableObject {
         mapCoordinateRegion = MKCoordinateRegion(
             center: location.coordinates,
             span: mapSpan)
+    }
+    
+    func showLocationList(){
+        withAnimation(SwiftUI.Animation.easeIn) {
+            showPlaceList.toggle()
+        }
     }
     
 }

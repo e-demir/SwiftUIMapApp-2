@@ -51,6 +51,13 @@ extension LocationsView{
                         .foregroundColor(.primary)
                         .padding()
                 }
+            if vm.showPlaceList{
+                LocationsListView()
+            }
+            
+        }
+        .onTapGesture {
+            vm.showLocationList()
         }
         .background(.thickMaterial)
         .cornerRadius(10)
