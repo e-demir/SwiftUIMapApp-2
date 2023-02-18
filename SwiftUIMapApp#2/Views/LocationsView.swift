@@ -16,6 +16,14 @@ struct LocationsView: View {
         ZStack{
             Map(coordinateRegion: $vm.mapCoordinateRegion)
                 .ignoresSafeArea()
+            
+            VStack(spacing: 0){
+               header
+                .padding()
+                
+                Spacer()
+            }
+            
         }
     }
 }
@@ -24,5 +32,28 @@ struct ListView_Previews: PreviewProvider {
     static var previews: some View {
         LocationsView()
             .environmentObject(LocationsViewModel())
+    }
+}
+
+// VIEWS EXTENSION
+extension LocationsView{
+    private var header : some View{
+        VStack {
+            Text(vm.mapLocation.name + ", " + vm.mapLocation.cityName)
+                .font(.title2)
+                .fontWeight(.black)
+                .foregroundColor(.primary)
+                .frame(height: 55)
+                .frame(maxWidth: .infinity)
+                .overlay(alignment: .leading) {
+                    Image(systemName: "arrow.down")
+                        .font(.headline)
+                        .foregroundColor(.primary)
+                        .padding()
+                }
+        }
+        .background(.thickMaterial)
+        .cornerRadius(10)
+        .shadow(color: Color.black, radius: 20, x: 0, y: 15)
     }
 }
