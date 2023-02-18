@@ -48,4 +48,12 @@ class LocationsViewModel : ObservableObject {
         }
     }
     
+    func changeLocation(location : Location){
+        withAnimation(.easeIn) {
+            self.mapLocation = location
+            self.listIsShown = false
+        }
+    
+    }
+    
 }
