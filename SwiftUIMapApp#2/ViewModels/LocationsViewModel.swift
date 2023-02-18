@@ -24,7 +24,7 @@ class LocationsViewModel : ObservableObject {
     @Published var mapCoordinateRegion : MKCoordinateRegion = MKCoordinateRegion()
     
     // Is list of places shown
-    @Published var showPlaceList : Bool = false
+    @Published var listIsShown : Bool = false
         
     let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
     
@@ -42,9 +42,9 @@ class LocationsViewModel : ObservableObject {
             span: mapSpan)
     }
     
-    func showLocationList(){
+    func toggleListShow(){
         withAnimation(SwiftUI.Animation.easeIn) {
-            showPlaceList.toggle()
+            listIsShown.toggle()
         }
     }
     
