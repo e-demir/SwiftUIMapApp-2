@@ -26,6 +26,8 @@ struct LocationsView: View {
                 ZStack{
                     ForEach(vm.locations) { location in
                         LocationsPreviewView(location: location)
+                            .padding()
+                            .shadow(radius: 20)
                     }
                 }
             }
