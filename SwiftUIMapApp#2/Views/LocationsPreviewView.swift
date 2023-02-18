@@ -29,7 +29,7 @@ struct LocationsPreviewView: View {
         .background(
             RoundedRectangle(cornerRadius: 10)
                 .fill(.ultraThinMaterial)
-                .offset(y:50)
+                .offset(y:80)
         )
         .cornerRadius(10)
 
